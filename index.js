@@ -28,7 +28,7 @@ const HelloHandler = {
       && request.intent.name === 'HelloIntent');
   },
   handle(handlerInput) {
-    const speechOutput = "Hello i am climby boi >:D";
+    const speechOutput = "Hello";
     return handlerInput.responseBuilder
       .speak(speechOutput)
       .getResponse();
@@ -37,46 +37,47 @@ const HelloHandler = {
 
 
 var VToFont = {
-  "v 0": "4",
-  "v 1": "5",
-  "v 2": "5+",
-  "v 3": "6A",
-  "v 4": "6B",
-  "v 5": "6C",
-  "v 6": "7A",
-  "v 7": "7A+",
-  "v 8": "7B",
-  "v 9": "7C",
-  "v 10": "7C+",
-  "v 11": "8A",
-  "v 12": "8A+",
-  "v 13": "8B",
-  "v 14": "8B+",
-  "v 15": "8C",
-  "v 16": "8C+",
+  "V0": "4",
+  "V1": "5",
+  "V2": "5+",
+  "V3": "6A",
+  "V4": "6B",
+  "V5": "6C",
+  "V6": "7A",
+  "V7": "7A+",
+  "V8": "7B",
+  "V9": "7C",
+  "V 10": "7C+",
+  "V 11": "8A",
+  "V 12": "8A+",
+  "V 13": "8B",
+  "V 14": "8B+",
+  "V 15": "8C",
+  "V 16": "8C+",
 }
 
 var FontToV = {
   "4": "V0",
   "5": "V1",
   "5 plus": "V2",
-  "6 a": "V3",
-  "6 a plus": "V3",
-  "6 b plus": "V4",
-  "6 c": "V5",
-  "6 c plus": "V5",
+  "6A": "V3",
+  "6A plus": "V3",
+  "6B plus": "V4",
+  "6C": "V5",
+  "6C plus": "V5",
   "7 a": "V6",
-  "7 a plus": "V7",
-  "7 b": "V8",
-  "7 b plus": "V8",
-  "7 c": "V9",
-  "7 c plus": "V10",
-  "8 a": "V11",
-  "8 a plus": "V12",
-  "8 b": "V13",
-  "8 b plus": "V14",
-  "8 c": "V15",
-  "8 c plus": "V16",
+  "78 plus": "V7",
+  "7A plus": "V7",
+  "7B": "V8",
+  "7B plus": "V8",
+  "7C": "V9",
+  "7C plus": "V10",
+  "8A": "V11",
+  "8A plus": "V12",
+  "8B": "V13",
+  "8B plus": "V14",
+  "8C": "V15",
+  "8C plus": "V16",
 }
 
 
@@ -93,8 +94,13 @@ const ConvertVGradeHandler = {
     const slotValue = Alexa.getSlotValue(handlerInput.requestEnvelope, 'VGrade');
     //need to create two dictionaries, one for v grade to font
     //and the other for font to v grade conversion
-    
-    const speechOutput = slotValue + " is " + VToFont[slotValue];
+    const speechOutput = "";
+    if(slotValue === '78 plus'){
+      speechOutput += "7A plus";
+    } else {
+      speechOutput += slotValue;
+    }
+    speechOutput += " in the Font system is " + VToFont[slotValue];
     return handlerInput.responseBuilder
       .speak(speechOutput)
       .getResponse();
@@ -111,8 +117,8 @@ const ConvertFontGradeHandler = {
     const slotValue = Alexa.getSlotValue(handlerInput.requestEnvelope, 'FontGrade');
     //need to create two dictionaries, one for v grade to font
     //and the other for font to v grade conversion
-    
-    const speechOutput = slotValue+ " is " + FontToV[slotValue];
+
+    const speechOutput = slotValue+ " in the V grade system is " + FontToV[slotValue];
     return handlerInput.responseBuilder
       .speak(speechOutput)
       .getResponse();
@@ -308,9 +314,9 @@ const enData = {
   translation: {
     SKILL_NAME: 'Space Facts',
     GET_FACT_MESSAGE: 'Here\'s your fact: ',
-    HELP_MESSAGE: 'You can say tell me a space fact, or, you can say exit... What can I help you with?',
+    HELP_MESSAGE: 'Tell me to convert a bouldering grade.',
     HELP_REPROMPT: 'What can I help you with?',
-    FALLBACK_MESSAGE: 'The Space Facts skill can\'t help you with that.  It can help you discover facts about space if you say tell me a space fact. What can I help you with?',
+    FALLBACK_MESSAGE: 'Sorry, that command wasn\'t recognized.',
     FALLBACK_REPROMPT: 'What can I help you with?',
     ERROR_MESSAGE: 'Sorry, an error occurred.',
     STOP_MESSAGE: 'Goodbye!',

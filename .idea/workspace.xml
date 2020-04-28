@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a99a3516-eb24-49ad-989e-faeedc51a5d4" name="Default Changelist" comment="" />
+    <list default="true" id="a99a3516-eb24-49ad-989e-faeedc51a5d4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +53,9 @@
         <option value="FxmlFile" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1b9i3bWClBAN3GOZ1H0vKl1OiYN" />
   <component name="ProjectViewState">
@@ -116,5 +122,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="393" key="GridCell.Tab.0.right/-1680.389.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1588067826110" />
+    <state x="662" y="312" key="new project wizard" timestamp="1588068830717">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="662" y="312" key="new project wizard/-1680.389.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1588068830717" />
   </component>
 </project>
