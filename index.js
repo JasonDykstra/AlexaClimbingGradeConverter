@@ -106,7 +106,7 @@ const ConvertFontGradeHandler = {
     }
 
     //output
-    speechOutput += " in the Font system is " + FontToV[slotValue];
+    speechOutput += " in the V system is " + FontToV[slotValue];
     return handlerInput.responseBuilder
       .speak(speechOutput)
       .getResponse();
