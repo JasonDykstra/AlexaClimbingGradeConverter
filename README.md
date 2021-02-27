@@ -10,4 +10,5 @@ One problem I encountered was that sometimes in the online Alexa simulation wher
 Maybe in the future when I work on server-less code again I can find the genesis of this issue!
 
 Here is a picture of the conversion chart I used:
+
 ![Conversion chart of climbing grades](pics/climbinggrades.png)
